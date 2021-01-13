@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+<h2>Profile</h2>
+<h3>{{ user.get_full_name }}(@{{ user.username }})</h3>
+{% if user.is_superuser %}
+<p></p>
+{% else %}
+<h3>Course : {{ course }}<br>Branch : {{ branch }}</h3>
+<table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>s1</th>
+        <th>s2</th>
+        <th>s3</th>
+        <th>s4</th>
+        <th>s5</th>
+        <th>s6</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1-1</td>
+        <td>{{ one }}</td>
+        <td>{{ two }}</td>
+        <td>{{ three }}</td>
+        <td>{{ four }}</td>
+        <td>{{ five }}</td>
+        <td>{{ six }}</td>
+      </tr>
+      <tr>
+        <td>1-2</td>
+        <td>{{ seven }}</td>
+        <td>{{ eight }}</td>
+        <td>{{ nine }}</td>
+        <td>{{ ten }}</td>
+        <td>{{ eleven }}</td>
+        <td>{{ twelve }}</td>
+      </tr>
+      <tr>
+        <td>2-1</td>
+        <td>{{ thirteen }}</td>
+        <td>{{ fourteen }}</td>
+        <td>{{ fifteen }}</td>
+        <td>{{ sixteen }}</td>
+        <td>{{ seventeen }}</td>
+        <td>{{ eighteen }}</td>
+      </tr>
+      <tr>
+        <td>2-2</td>
+        <td>{{ nineteen }}</td>
+        <td>{{ twenty }}</td>
+        <td>{{ twentyone }}</td>
+        <td>{{ twentytwo }}</td>
+        <td>{{ twentythree }}</td>
+        <td>{{ twentyfour }}</td>
+      </tr>
+      <tr>
+        <td>3-1</td>
+        <td>{{ twentyfive }}</td>
+        <td>{{ twentysix }}</td>
+        <td>{{ twentyseven }}</td>
+        <td>{{ twentyeight }}</td>
+        <td>{{ twentynine }}</td>
+        <td>{{ thirty }}</td>
+      </tr>
+      <tr>
+        <td>3-2</td>
+        <td>{{ thirtyone }}</td>
+        <td>{{ thirtytwo }}</td>
+        <td>{{ thirtythree }}</td>
+        <td>{{ thirtyfour }}</td>
+        <td>{{ thirtyfive }}</td>
+        <td>{{ thirtysix }}</td>
+      </tr>
+      <tr>
+        <td>4-1</td>
+        <td>{{ thirtyseven }}</td>
+        <td>{{ thirtyeight }}</td>
+        <td>{{ thirtynine }}</td>
+        <td>{{ forty }}</td>
+        <td>{{ fortyone }}</td>
+        <td>{{ fortytwo }}</td>
+      </tr>
+      <tr>
+        <td>4-2</td>
+        <td>{{ fortythree }}</td>
+        <td>{{ fortyfour }}</td>
+        <td>{{ fortyfive }}</td>
+        <td>{{ fortysix }}</td>
+        <td>{{ fortyseven }}</td>
+        <td>{{ fortyeight }}</td>
+      </tr>
+    </tbody>
+    </table>
+{% endif %}
+{% url 'public:change-password' as changepassword %}
+<a href='{{ changepassword }}'>Change Password</a>
+
+{% endblock %}

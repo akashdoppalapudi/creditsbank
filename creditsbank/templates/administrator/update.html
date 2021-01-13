@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+{% block title %}Update{% endblock %}
+{% block content %}
+<h2>Update</h2>
+{% url 'administrator:update-submission' as updatesubmission %}
+<form method='post' action="{{ updatesubmission }}">
+    {% csrf_token %}
+    <label for='username'>Student Id : </label>
+    <input type='text', id='username', name='username', required>
+    <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>s1</th>
+            <th>s2</th>
+            <th>s3</th>
+            <th>s4</th>
+            <th>s5</th>
+            <th>s6</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1-1</td>
+            <td><select id='1-1-1', name='1-1-1'>
+            {% include 'administrator/options.html' %}</select>
+            </td>
+            <td><select id='1-1-2', name='1-1-2'>
+            {% include 'administrator/options.html' %}</select>
+            </td>
+            <td><select id='1-1-3', name='1-1-3'>
+            {% include 'administrator/options.html' %}</select>
+            </td>
+            <td><select id='1-1-4', name='1-1-4'>
+            {% include 'administrator/options.html' %}</select>
+            </td>
+            <td><select id='1-1-5', name='1-1-5'>
+            {% include 'administrator/options.html' %}</select>
+            </td>
+            <td><select id='1-1-6', name='1-1-6'>
+            {% include 'administrator/options.html' %}</select>
+            </td>
+          </tr>
+          <tr>
+            <td>1-2</td>
+            <td><select id='1-2-1', name='1-2-1'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='1-2-2', name='1-2-2'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='1-2-3', name='1-2-3'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='1-2-4', name='1-2-4'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='1-2-5', name='1-2-5'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='1-2-6', name='1-2-6'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+          </tr>
+          <tr>
+            <td>2-1</td>
+            <td><select id='2-1-1', name='2-1-1'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='2-1-2', name='2-1-2'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='2-1-3', name='2-1-3'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='2-1-4', name='2-1-4'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='2-1-5', name='2-1-5'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='2-1-6', name='2-1-6'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+          </tr>
+          <tr>
+                <td>2-2</td>
+                <td><select id='2-2-1', name='2-2-1'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='2-2-2', name='2-2-2'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='2-2-3', name='2-2-3'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='2-2-4', name='2-2-4'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='2-2-5', name='2-2-5'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='2-2-6', name='2-2-6'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+          </tr>
+          <tr>
+            <td>3-1</td>
+            <td><select id='3-1-1', name='3-1-1'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='3-1-2', name='3-1-2'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='3-1-3', name='3-1-3'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='3-1-4', name='3-1-4'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='3-1-5', name='3-1-5'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='3-1-6', name='3-1-6'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+          </tr>
+          <tr>
+            <td>3-2</td>
+            <td><select id='3-2-1', name='3-2-1'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='3-2-2', name='3-2-2'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='3-2-3', name='3-2-3'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='3-2-4', name='3-2-4'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='3-2-5', name='3-2-5'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='3-2-6', name='3-2-6'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+          </tr>
+          <tr>
+            <td>4-1</td>
+            <td><select id='4-1-1', name='4-1-1'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='4-1-2', name='4-1-2'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='4-1-3', name='4-1-3'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='4-1-4', name='4-1-4'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='4-1-5', name='4-1-5'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='4-1-6', name='4-1-6'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+          </tr>
+          <tr>
+            <td>4-2</td>
+            <td><select id='4-2-1', name='4-2-1'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='4-2-2', name='4-2-2'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='4-2-3', name='4-2-3'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='4-2-4', name='4-2-4'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='4-2-5', name='4-2-5'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+                <td><select id='4-2-6', name='4-2-6'>
+                {% include 'administrator/options.html' %}</select>
+                </td>
+          </tr>
+        </tbody>
+        </table>
+    <button type='submit'>Upload</button>
+</form>
+{% endblock %}

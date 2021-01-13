@@ -1,0 +1,13 @@
+{% url 'public:login' as login_url %}
+{% url 'public:profile' as profile_url %}
+{% url 'administrator:update' as update_url %}
+{% url 'administrator:update-submission' as updatesubmission %}
+{% url 'public:logout' as logout_url %}
+<div>
+    <span>{% if request.path == profile_url %}<a href="{{ logout_url }}">Logout</a>{% else %}{% endif %}</span>
+    <span>{% if request.path == profile_url and user.is_superuser %}<a href="{{ update_url }}">Update</a>{% else %}{% endif %}</span>
+    <span>{% if request.path == update_url %}<a href="{{ logout_url }}">Logout</a>{% else %}{% endif %}</span>
+    <span>{% if request.path == update_url %}<a href="{{ profile_url }}">profile</a>{% else %}{% endif %}</span>
+    <span>{% if request.path == updatesubmission %}<a href="{{ logout_url }}">Logout</a>{% else %}{% endif %}</span>
+    <span>{% if request.path == updatesubmission %}<a href="{{ profile_url }}">profile</a>{% else %}{% endif %}</span>
+</div>
