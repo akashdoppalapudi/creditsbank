@@ -3,7 +3,7 @@
 {% block content %}
 <h2>Profile</h2>
 <h3>{{ user.get_full_name }}(@{{ user.username }})</h3>
-{% if user.is_superuser %}
+{% if user.is_superuser or user.is_staff %}
 <p></p>
 {% else %}
 <h3>Course : {{ course }}<br>Branch : {{ branch }}</h3>
@@ -94,6 +94,11 @@
       </tr>
     </tbody>
     </table>
+{% endif %}
+{% if user.is_superuser or user.is_staff %}
+<p></p>
+{% else %}
+<h4>CGPA : {{ cgpa }}</h4>
 {% endif %}
 {% url 'public:change-password' as changepassword %}
 <a href='{{ changepassword }}'>Change Password</a>
