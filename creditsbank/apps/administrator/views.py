@@ -6,6 +6,13 @@ from cryptography.fernet import Fernet
 
 from .models import UserCredits
 
+#helper functions
+def encrypt(msg):
+    key = Fernet.generate_key()
+    f = Fernet(key)
+    msg_enc = f.encrypt(msg.encode('utf-8'))
+    return key.decode('utf-8'), msg_enc.decode('utf-8')
+
 # Create your views here.
 @login_required(login_url = '/public/login')
 def update(request: HttpRequest) -> HttpResponse:
@@ -16,12 +23,7 @@ def update(request: HttpRequest) -> HttpResponse:
 
 @login_required(login_url = '/public/login')
 def update_submission(request: HttpRequest) -> HttpResponse:
-    if request.user.is_superuser or request.user.is_staff:
-        def encrypt(msg):
-            key = Fernet.generate_key()
-            f = Fernet(key)
-            msg_enc = f.encrypt(msg.encode('utf-8'))
-            return key.decode('utf-8'), msg_enc.decode('utf-8')
+    if request.user.is_superuser or request.user.is_staff:        
         user_update = User.objects.get(username=request.POST['username'])
         credits_list = []
         for i in range(1,5):
