@@ -7,7 +7,7 @@ from cryptography.fernet import Fernet
 from .models import UserData
 from creditsbank.apps.administrator.models import UserCredits
 
-#helper function
+# helper function
 def decrypt(key, msg_enc):
     f = Fernet(key.encode('utf-8'))
     msg_dec = f.decrypt(msg_enc.encode('utf-8')).decode('utf-8')
